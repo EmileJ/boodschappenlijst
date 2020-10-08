@@ -3,11 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Opdracht 3/4/7 - Boodschappenlijst</title>
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js"></script>
 </head>
 <body>
+    <table>
+        <thead>
+            <th>Product</th>
+            <th>Prijs</th>
+            <th>Aantal</th>
+            <th>Subtotaal</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Brood</td>
+                <td class="productPrice">1.00</td>
+                <td>
+                    <input class="productQuantity" type="number">
+                </td>
+                <td class="productTotalCost">0</td>
+            </tr>
+            <tr>
+                <td>Broccoli</td>
+                <td class="productPrice">0.99</td>
+                <td>
+                    <input class="productQuantity" type="number">
+                </td>
+                <td class="productTotalCost">0</td>
+            </tr>
+            <tr>
+                <td>Krentenbollen</td>
+                <td class="productPrice">1.20</td>
+                <td>
+                    <input class="productQuantity" type="number">
+                </td>
+                <td class="productTotalCost">0</td>
+            </tr>
+            <tr>
+                <td>Noten</td>
+                <td class="productPrice">2.99</td>
+                <td>
+                    <input class="productQuantity" type="number">
+                </td>
+                <td class="productTotalCost">0</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="3">Totaal</td>
+            <td id="totalCost">0</td>
+        </tfoot>
+    </table>
     
 </body>
 </html>
