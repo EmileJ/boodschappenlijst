@@ -1,13 +1,13 @@
+var table = document.getElementsByTagName("table")[0];
 var quantities = document.getElementsByClassName("productQuantity");
 var prices = document.getElementsByClassName("productPrice");
 var subTotals = document.getElementsByClassName("productTotalCost");
-var total = 0;
 
 table.addEventListener("change", (event)=>{
-    console.log("aantal producten is gewijzigd");
-    console.log(event);
-    var quantity = parseInt(event.target.value);
-    var price = event.target.parentElement.parentElement.getElementsByClassName("productPrice")[0].innerHTML;
-    total += (price*quantity);
-    console.log(total);
+    var total = 0;
+    for(i = 0; i < prices.length; i++){
+        subTotals[i].innerHTML = (quantities[i].value*parseFloat(prices[i].innerHTML)).toFixed(2);
+        total += parseFloat(subTotals[i].innerHTML);
+    }
+    document.getElementById("totalCost").innerHTML = total.toFixed(2);
 })
